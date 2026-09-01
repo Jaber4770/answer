@@ -16,5 +16,5 @@ function describeValue(param) {
 }
 
 
-const result = describeValue(undefined);
+const result = describeValue(" ");
 console.log(result);
