@@ -1,5 +1,5 @@
 const getChaseVerdict = (target, scored, ballsLeft) => {
-    
+
     const runsNeeded = target - scored;
     if (runsNeeded <= 0) {
         return "Won";
@@ -9,15 +9,15 @@ const getChaseVerdict = (target, scored, ballsLeft) => {
 
     const requiredRate = (runsNeeded / ballsLeft) * 6;
     if (requiredRate <= 6 && requiredRate > 0) {
-        return `Need ${requiredRate} runs in ${ballsLeft} balls | Comfortable`;
+        return `Need ${runsNeeded} runs in ${ballsLeft} balls | Comfortable`;
     } else if (requiredRate > 6 && requiredRate <= 12) {
-        return `Need ${requiredRate} runs in ${ballsLeft} balls | Tough`;
+        return `Need ${runsNeeded} runs in ${ballsLeft} balls | Tough`;
     } else if (requiredRate > 12) {
-        return `Need ${requiredRate} runs in ${ballsLeft} balls | Almost Impossible`;
+        return `Need ${runsNeeded} runs in ${ballsLeft} balls | Almost Impossible`;
     }
 
 
 };
 
-const check = getChaseVerdict(150, 149, 1);
+const check = getChaseVerdict(200, 200, 12);
 console.log(check);
