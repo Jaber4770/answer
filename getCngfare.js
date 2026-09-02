@@ -21,5 +21,5 @@ function getCngFare(distance, isNight = false, waitingMinutes = 0) {
     return totalFare;
 }
 
-const result = getCngFare(5, true);
+const result = getCngFare(0, true);
 console.log(result);
