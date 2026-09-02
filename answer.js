@@ -89,6 +89,8 @@ function getCngFare(distance, isNight = false, waitingMinutes = 0) {
 
 
 
+// question 5: 
+
 
 
 
